@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head >
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notizblock</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+
+<body onload="onPageLoad()">
+    <div class="intro">
+        <h1>todo-liste</h1>
+    </div>
+
+    <div>
+        <input id="myInput" type="text" placeholder="Neue Notiz.." maxlength="20">
+        <button onclick="add()" id="enter"><i class="fas fa-pencil-alt"></i></button>
+    </div>
+
+    <div>
+        <button onclick="openTrash()" id="trash">Papierkorb</button>
+        <div id="dialog-trash-bg" class="dialog-trash-bg d-none">
+            <div id="dialog-trash" class="dialog-trash"></div>
+            <button class="closeButton" onclick="closeTrash()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+    </div>
+
+    <div>
+        <button onclick="openArchiv()" id="archiv">Archiv</button>
+        <div id="dialog-archiv-bg" class="dialog-archiv-bg d-none">
+            <div id="dialog-archiv" class="dialog-archiv"></div>
+            <button class="closeButton" onclick="closeArchiv()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+    </div>
+
+    <div id="content"></div>
+</body>
+
+</html>

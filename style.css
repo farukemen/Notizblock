@@ -1,0 +1,270 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    text-align: center;
+    background: #34495e;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Kopfbereich */
+
+.intro {
+    margin: 24px 0;
+}
+
+h1 {
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+p {
+    font-weight: bold;
+}
+
+.helpText {
+    color: #ecf0f1;
+    margin-bottom: 32px;
+}
+
+/* Eingabefeld */
+
+input {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    min-width: 24%;
+    outline: 0;
+}
+
+#enter {
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+    color: #ecf0f1;
+    background-color: #7f8c8d;
+    transition: all .5s ease;
+    cursor: pointer;
+    margin-bottom: 16px;
+}
+
+#enter:hover {
+    color: #34495e;
+    background-color: #95a5a6;
+}
+
+ul {
+    text-align: left;
+    margin-top: 12px;
+}
+
+li {
+    list-style: none;
+    background: #95a5a6;
+    color: #34495e;
+    padding: 10px 20px;
+    font-weight: bold;
+    border: 2px solid #34495e;
+    border-radius: 10px;
+    margin: 0 400px;
+    transition: all .5s ease;
+}
+
+li > button {
+    font-weight: bold;
+    background: none;
+    border: none;
+    color: #34495e;
+    float: right;
+    cursor: pointer;
+    width: 24px;
+    margin-left: 10px;
+    transition: all .5s ease-in;
+}
+
+li > button:hover {
+    color: #ffffff;
+}
+
+/* Papierkorb & Archiv*/
+
+#trash{
+    position: absolute;
+    left: 0;
+    top: 250px;
+    background: #7f8c8d;
+    border: 1px solid #7f8c8d;
+    border-radius: 0 10px 10px 0;
+    font-size: 24px;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: #ffffff;
+    transition: all .5s ease-in;
+}
+
+#trash:hover {
+    color: #34495e;
+    background: #95a5a6;
+}
+
+#archiv {
+    position: absolute;
+    left: 0;
+    top: 350px;
+    background: #7f8c8d;
+    border: 1px solid #7f8c8d;
+    border-radius: 0 10px 10px 0;
+    font-size: 24px;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: #ffffff;
+    transition: all .5s ease-in;
+}
+
+#archiv:hover {
+    color: #34495e;
+    background: #95a5a6;
+}
+
+/* Dialogbereich */
+
+.dialog-trash-bg, .dialog-archiv-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 999;   
+}
+
+.d-none {
+    display: none;
+}
+
+.dialog-trash, .dialog-archiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 40vw;
+    height: auto;
+    padding: 24px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.li-trashlist {
+    width: 370px;
+}
+
+.closeButton {
+    position: absolute;
+    left: 100px;
+    top: 50px;
+    background: none;
+    border: none;
+    font-weight: bold;
+    color: #34495e;
+    cursor: pointer;
+    font-size: 32px;
+    transition: transform 0.5s ease-in;
+}
+
+.closeButton:hover {
+    transform: scale(1.2);
+    color: white;
+}
+
+@media (max-width: 1024px) {
+    body {
+        margin: 100px 200px;
+    }
+
+    li {
+        margin: 0 200px;
+    }
+
+    .li-trashlist {
+        width: 300px;
+    }
+}
+
+@media (max-width: 978px) {
+    body {
+        margin: 100px 150px;
+    }
+
+    li {
+        margin: 0 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        margin: 100px 100px;
+    }
+
+    li {
+        margin: 0 100px;
+    }
+    .li-trashlist {
+        width: 200px;
+    }
+}
+
+@media (max-width: 578px) {
+    body {
+        margin: 100px 50px;
+    }
+
+    li {
+        margin: 0 50px;
+    }
+
+    .li-trashlist {
+        width: 100px;
+    }
+
+    #trash {
+        top: 50px;
+    }
+
+    #archiv {
+        top: 100px;
+    }
+
+    .closeButton {
+        position: absolute;
+        right: 0px;
+        top: 50px;
+    }
+}
+
+@media (max-width: 489px) {
+    body {
+        margin: 100px 0px;
+    }
+
+    .intro {
+        padding: 70px 0;
+    }
+
+    li {
+        margin: 0x;
+    }
+
+    #trash {
+        top: 50px;
+    }
+
+    #archiv {
+        top: 100px;
+    }
+}
